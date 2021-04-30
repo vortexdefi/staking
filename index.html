@@ -1,0 +1,500 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://etherscan.io/token/images/vortexdefi_32.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/main.css">
+<title>Vortex</title>
+</head>
+<body>
+<header class="vt-header">
+<div class="container-fluid h-100">
+<div class="row align-items-center h-100">
+<div class="col-5 col">
+<a href="index.html"><img src="assets/images/vortex-defi-logo.svg" alt="Vortex Defi"></a>
+</div>
+<div class="col-7 col">
+<div class="d-flex align-items-center justify-content-end">
+<ul class="social-icons">
+<li><a class="medium" target="_blank" href="https://vortexdefi.medium.com/">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15.833" viewBox="0 0 20 15.833">
+<path id="medium-icon" d="M18.4,4.361,20,2.834V2.5H14.472l-3.94,9.807L6.049,2.5H.253v.334L2.117,5.078a.782.782,0,0,1,.253.653V14.55a1.006,1.006,0,0,1-.269.875L0,17.97v.33H5.954v-.334l-2.1-2.541a1.037,1.037,0,0,1-.289-.875V6.922L8.792,18.3H9.4L13.893,6.922v9.068c0,.239,0,.288-.157.445L12.12,18v.335h7.843V18L18.4,16.473a.464.464,0,0,1-.178-.445V4.806a.462.462,0,0,1,.177-.445Z" transform="translate(0 -2.5)" fill="#999" />
+</svg>
+</a></li>
+<li><a class="github" target="_blank" href="https://github.com/vortexdefi">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.167" viewBox="0 0 20 19.167">
+<path id="github-icon" d="M10,.5A9.913,9.913,0,0,0,0,10.327,9.843,9.843,0,0,0,6.838,19.65c.5.092.683-.212.683-.473,0-.233-.008-.852-.013-1.671C4.727,18.1,4.14,16.188,4.14,16.188a2.619,2.619,0,0,0-1.113-1.438c-.906-.609.07-.6.07-.6a2.092,2.092,0,0,1,1.532,1.013,2.153,2.153,0,0,0,2.912.818,2.081,2.081,0,0,1,.633-1.314C5.954,14.424,3.62,13.579,3.62,9.814A3.754,3.754,0,0,1,4.649,7.178a3.438,3.438,0,0,1,.087-2.6s.838-.263,2.75,1.008a9.588,9.588,0,0,1,5,0c1.9-1.271,2.737-1.008,2.737-1.008a3.533,3.533,0,0,1,.1,2.6,3.77,3.77,0,0,1,1.025,2.637c0,3.775-2.338,4.606-4.563,4.848a2.332,2.332,0,0,1,.675,1.818c0,1.315-.012,2.372-.012,2.691,0,.257.175.565.687.467A9.813,9.813,0,0,0,20,10.327,9.915,9.915,0,0,0,10,.5Z" transform="translate(0 -0.5)" fill="#999" />
+</svg>
+</a></li>
+<li><a class="twitter" target="_blank" href="https://twitter.com/vortexdefi">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.25" viewBox="0 0 20 16.25">
+<g id="Group_48" data-name="Group 48" transform="translate(0)">
+<path id="Path_308" data-name="Path 308" d="M20,49.924a8.549,8.549,0,0,1-2.363.648,4.077,4.077,0,0,0,1.8-2.266,8.194,8.194,0,0,1-2.6.993,4.1,4.1,0,0,0-7.092,2.8,4.222,4.222,0,0,0,.1.935,11.606,11.606,0,0,1-8.451-4.289,4.1,4.1,0,0,0,1.26,5.48,4.049,4.049,0,0,1-1.853-.5v.045A4.119,4.119,0,0,0,4.085,57.8a4.092,4.092,0,0,1-1.075.135,3.625,3.625,0,0,1-.776-.07,4.139,4.139,0,0,0,3.831,2.856A8.239,8.239,0,0,1,.981,62.466,7.679,7.679,0,0,1,0,62.41a11.543,11.543,0,0,0,6.29,1.84A11.59,11.59,0,0,0,17.96,52.583c0-.181-.006-.356-.015-.53A8.18,8.18,0,0,0,20,49.924Z" transform="translate(0 -48)" fill="#999" />
+</g>
+ </svg>
+</a></li>
+<li><a class="telegram" target="_blank" href="https://t.me/VortexDeFiOfficial">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.773" viewBox="0 0 20 16.773">
+<path id="telegram-icon" d="M19.944,6.055,16.926,20.288c-.228,1-.821,1.255-1.665.781l-4.6-3.389L8.443,19.815a1.155,1.155,0,0,1-.924.451l.33-4.683,8.523-7.7c.371-.33-.08-.513-.576-.183L5.26,14.332.724,12.913c-.987-.308-1-.987.205-1.46L18.672,4.617C19.493,4.309,20.212,4.8,19.944,6.055Z" transform="translate(-0.001 -4.528)" fill="#999" />
+</svg>
+</a></li>
+</ul>
+<a href="https://app.vortexdefi.com/" class="d-none d-md-block btn btn-outline-primary btn-lg">Use Application</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="vt-intro-banner">
+<div class="container">
+<div class="banner-text text-center">
+<p class="text-uppercase">Yield Farming Simplified</p>
+<h1>Unlock the world Of <br> Decentralized Finance</h1>
+</div>
+<div class="banner-btns d-flex flex-column flex-sm-row justify-content-center">
+<div class="dropdown me-md-2 me-0">
+<button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="stake_vortex" data-bs-toggle="dropdown" aria-expanded="false">
+Stake Vortex
+</button>
+<ul class="dropdown-menu" aria-labelledby="stake_vortex">
+<li><a class="dropdown-item" target="_blank" href="https://defiwizard.xyz/vortex/staking"><img src="assets/images/ethereum-chain.svg" alt="ethereum"> Ethereum Chain</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item position-relative" target="_blank" href="https://defiwizard.xyz/vortex/staking/bsc"><img src="assets/images/binance-smart-chain.svg" alt="binance"> Binance Smart Chain </a></li>
+</ul>
+</div>
+<a href="https://chainswap.exchange/" target="_blank" class="btn btn-outline-primary btn-lg ms-md-2 ms-0 position-relative">ETH to BSC Bridge </a>
+<a href="https://app.vortexdefi.com/" class="d-md-none btn btn-outline-primary btn-lg">Use Application</a>
+</div>
+<div class="intro-vector d-flex justify-content-center">
+<div class="rect-shape three-shapes">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape three-shapes alter">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes vertical">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape one-shape">
+<span></span>
+</div>
+<img src="assets/images/intro-vector.svg" alt="Intro Vector">
+</div>
+</div>
+</section>
+<section class="vt-supported-protocols">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-10">
+<div class="protocol-content-wrapper">
+<div class="text-start text-md-center">
+<h2 class="section-heading">Supported Protocols</h2>
+<div class="section-sub-heading">
+<p>We aim to bring together leading protocols and platforms to allow honest farmers to leverage the maximum potential of decentralized finance.</p>
+</div>
+</div>
+<div class="protocols-logos">
+<img src="assets/images/makerdao-logo.png" alt="Makerdao">
+<img src="assets/images/compound-logo.png" alt="Compound">
+<img src="assets/images/aave-logo.png" alt="Aave">
+<img src="assets/images/Yearn-logo.png" alt="Yearn">
+<img src="assets/images/curve-logo.png" alt="Curve">
+<img src="assets/images/uniswap-logo.png" alt="Uniswap">
+<img src="assets/images/idle-logo.png" alt="Idle">
+<img src="assets/images/nexus-mutual-logo.png" alt="Nexus Mutual">
+<img src="assets/images/kava-logo.png" alt="Kava">
+<img src="assets/images/oneinch-logo.png" alt="1Inch">
+</div>
+</div>
+<div class="rect-shape three-shapes">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape three-shapes alter">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes vertical">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape one-shape">
+<span></span>
+</div>
+<img src="assets/images/plant-vector.svg" alt="plant-vector" class="plant-vector">
+</div>
+</div>
+</div>
+</section>
+<section class="vt-ecosystem">
+<div class="text-center">
+<h2 class="section-heading">Vortex <br>Ecosystem</h2>
+</div>
+<img src="assets/images/ecosystem-vector.svg" alt="Ecosystem Vector" class="heading-vector">
+<img src="assets/images/ecosystem-plant.svg" alt="Ecosystem Plant" class="ecosystem-plant d-sm-none">
+<div class="ecosystem-carousel">
+<div class="ecosystem-box">
+<div class="box-icon">
+<img src="assets/images/v-swap-icon.svg" alt="v-swap">
+</div>
+<h3>V-SWAP:</h3>
+<p>Seamless peer to peer Crypto asset swap platform</p>
+</div>
+<div class="ecosystem-box">
+<div class="box-icon">
+<img src="assets/images/v-nfts-icon.svg" alt="v-nfts">
+</div>
+<h3>V-NFTs:</h3>
+<p>NFT asset management and swaps within the Vortex ecosystem</p>
+</div>
+<div class="ecosystem-box">
+<div class="box-icon">
+<img src="assets/images/v-yield-icon.svg" alt="v-nfts">
+</div>
+<h3>V-Yield:</h3>
+<p>Deposit your crypto assets and earn the most optimised interest rate.</p>
+</div>
+<div class="ecosystem-box">
+<div class="box-icon">
+<img src="assets/images/v-dex-icon.svg" alt="v-dex">
+</div>
+<h3>V-Dex:</h3>
+<p>Block chain agnostic DEX bridging cross-chain DeFi assets</p>
+</div>
+<div class="ecosystem-box">
+ <div class="box-icon">
+<img src="assets/images/v-insure-icon.svg" alt="v-insure">
+</div>
+<h3>V-Insure:</h3>
+<p>Insure DeFi exposure within the Vortex Ecosystem</p>
+</div>
+<div class="ecosystem-box">
+<div class="box-icon">
+<img src="assets/images/v-pay-icon.svg" alt="v-pay">
+</div>
+<h3>V-Pay:</h3>
+<p>Fiat ramps to buy and sell tokens with your credit card or bank account</p>
+</div>
+</div>
+<div class="rect-shape three-shapes">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes vertical">
+<span></span>
+<span></span>
+</div>
+</section>
+<section class="vt-product-features">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading">Product Features</h2>
+</div>
+<div class="features-list">
+<div class="row g-0">
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/feature-borrow-icon.svg" alt="Borrow Icon">
+</div>
+<h3>Borrow</h3>
+<p>The platform makes it easy to borrow crypto assets using your collateral.</p>
+</div>
+</div>
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/feature-insured-icon.svg" alt="Insured Icon">
+</div>
+<h3>Insured</h3>
+<p>Get covered against smart contract failure and hedge your risk.</p>
+</div>
+</div>
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/feature-lend-earn.svg" alt="Lend & Earn Icon">
+</div>
+<h3>Lend & Earn</h3>
+<p>Deposit your crypto assets and earn the most optimised interest rate.</p>
+</div>
+</div>
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/feature-non-custodial.svg" alt="Non-Custodial">
+</div>
+<h3>Non-Custodial</h3>
+<p>No one else can access your funds as assets are stored on a contract wallet.</p>
+</div>
+</div>
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/feature-swap-icon.svg" alt="Swap">
+</div>
+<h3>Swap</h3>
+<p>Swap assets in an instant with liquidity from multiple decentralised exchanges.</p>
+</div>
+</div>
+<div class="col col-md-4">
+<div class="feature-box">
+<div class="feature-icon">
+<img src="assets/images/asset-management-icon.svg" alt="Swap">
+</div>
+<h3>Asset Management</h3>
+<p>Single user interface for all DeFi needs to avoid the hassle of huge UI learning curve.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="vt-faq-section">
+<div class="row g-0">
+<div class="col-md-6">
+<div class="faq-vector">
+<img src="assets/images/faq-vector.svg" alt="faq-vector">
+</div>
+</div>
+<div class="col-md-6">
+<div class="faq-questions">
+<h2 class="section-heading">Frequently Asked Questions</h2>
+<p>Can’t find the solution to your query? <a href="/cdn-cgi/l/email-protection#026a676e6e6d42746d7076677a6667646b2c616d6f">Contact us</a></p>
+<div class="accordion accordion-flush" id="faqAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header" id="questionOne">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question-collapseOne" aria-expanded="false" aria-controls="question-collapseOne">
+Is Vortex available in my country?
+</button>
+</h2>
+<div id="question-collapseOne" class="accordion-collapse collapse show" aria-labelledby="questionOne">
+<div class="accordion-body">You can access Vortex from anywhere in the world.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="questionTwo">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question-collapseTwo" aria-expanded="false" aria-controls="question-collapseTwo">
+Who keeps the custody of assets?
+</button>
+</h2>
+<div id="question-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="questionTwo">
+<div class="accordion-body">We do not hold any of your assets. A smart contract secures your transactions and stores your assets on a contract wallet. You can view everything publicly on the ethereum blockchain.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="questionThree">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question-collapseThree" aria-expanded="false" aria-controls="question-collapseThree">How can I connect with the team?</button>
+</h2>
+<div id="question-collapseThree" class="accordion-collapse collapse show" aria-labelledby="questionThree">
+<div class="accordion-body">Reach out to us via Telegram, Twitter, or Mail.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="vt-partners-inventors">
+<div class="container">
+<div class="row">
+<div class="col-md-9">
+<div class="partners-investors-logos-wrapper">
+<div class="text-center headings">
+<h2 class="section-heading">Partners & Investors</h2>
+<div class="section-sub-heading">We are partnered with leading blockchain companies for building a suite of tools, accessing multi-chains under one roof.</div>
+</div>
+<div class="partner-logos">
+<div class="row g-0">
+<div class="col-4 col-md">
+<div class="logo-wrap gray">
+<img src="assets/images/x21-logo.png" alt="x21">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap gray">
+<img src="assets/images/pluto-logo.png" alt="pluto-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap gray">
+<img src="assets/images/moonrock-capital-logo.png" alt="moonrock-capital-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap gray">
+<img src="assets/images/stl-logo.png" alt="stl-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap gray">
+<img src="assets/images/duckdao-logo.png" alt="duckdao-logo">
+</div>
+</div>
+</div>
+<div class="row g-0">
+<div class="col-4 col-md">
+<div class="logo-wrap">
+<img src="assets/images/magnus-capital-logo.png" alt="magnus-capital-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap">
+<img src="assets/images/faculty-capital-logo.png" alt="faculty-capital-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap">
+<img src="assets/images/black-mamba-logo.png" alt="black-mamba-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap">
+<img src="assets/images/a195-logo.png" alt="a195-logo">
+</div>
+</div>
+<div class="col-4 col-md">
+<div class="logo-wrap">
+<img src="assets/images/vendetta-capital-logo.png" alt="vendetta-capital-logo">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rect-shape three-shapes">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes">
+<span></span>
+<span></span>
+</div>
+<div class="rect-shape two-shapes bottom">
+<span></span>
+<span></span>
+</div>
+<img src="assets/images/partners-vector.svg" alt="partners-vector" class="partner-vector">
+</section>
+<footer class="vt-site-footer">
+<div class="row g-0">
+<div class="col-md-7">
+<div class="footer-links">
+<div class="row">
+<div class="col-md-4">
+<h6>Contact Us</h6>
+<a href="/cdn-cgi/l/email-protection#2a424f4646456a5c45585e4f524e4f4c4304494547"><span class="__cf_email__" data-cfemail="5139343d3d3e11273e23253429353437387f323e3c">[email&#160;protected]</span></a>
+</div>
+<div class="col-md-4">
+<h6>Information</h6>
+<ul>
+<li><a href="about-us.html">About Us</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h6>Join the community</h6>
+<ul class="social-icons">
+<li><a class="medium" target="_blank" href="https://vortexdefi.medium.com/">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15.833" viewBox="0 0 20 15.833">
+<path id="medium-icon" d="M18.4,4.361,20,2.834V2.5H14.472l-3.94,9.807L6.049,2.5H.253v.334L2.117,5.078a.782.782,0,0,1,.253.653V14.55a1.006,1.006,0,0,1-.269.875L0,17.97v.33H5.954v-.334l-2.1-2.541a1.037,1.037,0,0,1-.289-.875V6.922L8.792,18.3H9.4L13.893,6.922v9.068c0,.239,0,.288-.157.445L12.12,18v.335h7.843V18L18.4,16.473a.464.464,0,0,1-.178-.445V4.806a.462.462,0,0,1,.177-.445Z" transform="translate(0 -2.5)" fill="#999" />
+</svg>
+</a></li>
+<li><a class="github" target="_blank" href="https://github.com/vortexdefi">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.167" viewBox="0 0 20 19.167">
+<path id="github-icon" d="M10,.5A9.913,9.913,0,0,0,0,10.327,9.843,9.843,0,0,0,6.838,19.65c.5.092.683-.212.683-.473,0-.233-.008-.852-.013-1.671C4.727,18.1,4.14,16.188,4.14,16.188a2.619,2.619,0,0,0-1.113-1.438c-.906-.609.07-.6.07-.6a2.092,2.092,0,0,1,1.532,1.013,2.153,2.153,0,0,0,2.912.818,2.081,2.081,0,0,1,.633-1.314C5.954,14.424,3.62,13.579,3.62,9.814A3.754,3.754,0,0,1,4.649,7.178a3.438,3.438,0,0,1,.087-2.6s.838-.263,2.75,1.008a9.588,9.588,0,0,1,5,0c1.9-1.271,2.737-1.008,2.737-1.008a3.533,3.533,0,0,1,.1,2.6,3.77,3.77,0,0,1,1.025,2.637c0,3.775-2.338,4.606-4.563,4.848a2.332,2.332,0,0,1,.675,1.818c0,1.315-.012,2.372-.012,2.691,0,.257.175.565.687.467A9.813,9.813,0,0,0,20,10.327,9.915,9.915,0,0,0,10,.5Z" transform="translate(0 -0.5)" fill="#999" />
+</svg>
+</a></li>
+<li><a class="twitter" target="_blank" href="https://twitter.com/vortexdefi">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.25" viewBox="0 0 20 16.25">
+<g id="Group_48" data-name="Group 48" transform="translate(0)">
+<path id="Path_308" data-name="Path 308" d="M20,49.924a8.549,8.549,0,0,1-2.363.648,4.077,4.077,0,0,0,1.8-2.266,8.194,8.194,0,0,1-2.6.993,4.1,4.1,0,0,0-7.092,2.8,4.222,4.222,0,0,0,.1.935,11.606,11.606,0,0,1-8.451-4.289,4.1,4.1,0,0,0,1.26,5.48,4.049,4.049,0,0,1-1.853-.5v.045A4.119,4.119,0,0,0,4.085,57.8a4.092,4.092,0,0,1-1.075.135,3.625,3.625,0,0,1-.776-.07,4.139,4.139,0,0,0,3.831,2.856A8.239,8.239,0,0,1,.981,62.466,7.679,7.679,0,0,1,0,62.41a11.543,11.543,0,0,0,6.29,1.84A11.59,11.59,0,0,0,17.96,52.583c0-.181-.006-.356-.015-.53A8.18,8.18,0,0,0,20,49.924Z" transform="translate(0 -48)" fill="#999" />
+</g>
+</svg>
+</a></li>
+<li><a class="telegram" target="_blank" href="https://t.me/VortexDeFiOfficial">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16.773" viewBox="0 0 20 16.773">
+<path id="telegram-icon" d="M19.944,6.055,16.926,20.288c-.228,1-.821,1.255-1.665.781l-4.6-3.389L8.443,19.815a1.155,1.155,0,0,1-.924.451l.33-4.683,8.523-7.7c.371-.33-.08-.513-.576-.183L5.26,14.332.724,12.913c-.987-.308-1-.987.205-1.46L18.672,4.617C19.493,4.309,20.212,4.8,19.944,6.055Z" transform="translate(-0.001 -4.528)" fill="#999" />
+</svg>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-5">
+<div class="copyright-text">
+Copyright © Vortex DeFi. <br> All Rights Reserved.
+</div>
+</div>
+</div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="assets/js/slick.min.js"></script>
+<script type="text/javascript">
+
+        jQuery(document).ready(function(){
+
+            $('.ecosystem-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                centerMode: true,
+                centerPadding: '220px',
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '20px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+        });
+
+    </script>
+</body>
+</html>
